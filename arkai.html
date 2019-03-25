@@ -1,0 +1,303 @@
+---
+layout: doc-layout
+title: Arkai – Modern Minimal Blog & Magazine Theme for Ghost
+theme_name: arkai
+---
+
+# {{page.title}} {#title}
+
+<a href="http://redirect.electronthemes.com/arkai-buy">
+    <img src="/assets/images/arkai/arkai-thumbnail.jpg" />
+</a>
+
+When you purchase our theme. You can download Theme files from Downloads page. Navigate through your purchased items.
+Click download button then you will see 2 options. Main file contain everything. Installable Ghost Theme is included
+only installable Ghost theme files. Check list of what’s included when you download the main file option.
+
+- Installable Theme File (.zip) - You can upload this file to your Ghost dashboard to install the theme.
+
+- Documentation - Contain theme documentation file.
+
+- Licensing Folder - Contain all licensing info files.
+
+<a class="btn btn-secondary" target="_blank" href="http://redirect.electronthemes.com/arkai-demo">
+    Live Preview
+</a>
+<a class="btn btn-primary" target="_blank" href="http://redirect.electronthemes.com/arkai-buy">
+    Buy Now
+</a>
+<br><br>
+
+
+# Free Theme Support {#free-support}
+
+<div class="tip custom-block">
+    <p class="custom-block-title">Attention Please</p>
+    <p>All of our themes come with free support and currently we handle all support questions through Our Support <a href="https://www.facebook.com/groups/electronthemes/" target="_blank">Facebook
+    Group</a> <u>[recommended for fast support]</u>.</p>
+    <hr>
+    <p>You can also mail us for support <a href="mailto:electronthemes@gmail.com​">electronthemes@gmail.com​</a></p>
+</div>
+<br>
+### Support includes
+
+- Responding to questions or problems regarding the item and its features
+- Fixing bugs and reported issues
+- Feature Request
+- Providing updates to ensure compatibility with new software versions
+#### Item support does not include
+
+- Customization and installation services. ( You can ask [paid support](https://electronthemes.com/contact/) )
+- Support for third party software and plug-ins
+
+### Installation {#installation}
+Login to your ghost blog `https://yourdomain.com/ghost` then navigate to `Designs > Uploads` Themes.
+
+Drug your downloaded theme zip file.
+
+![](/assets/images/common/upload.png)
+
+### Menu/Navigation Setup
+
+Handle theme menu items from `Settings > Design` in the navigation section
+
+![Settings Navigation](/assets/images/arkai/settings.design.png)
+
+### Setup blog title, header and description
+
+**Go to:**
+
+- General > Publication icon for Favicon
+- General > Publication logo for Logo
+- General > Publication cover for Cover Image
+
+General > Title & description
+
+![Settings Navigation](/assets/images/arkai/settings.general.png)
+
+### New Page
+
+To create new page, go to `Dashboard > Stories > New Story` Give the title for new stories and mark "Turn this post
+into a page" from the settings icon
+
+![](/assets/images/common/page.png)
+
+### Tag
+
+To create tag, go to `Dashboard > tags`
+
+![](/assets/images/common/tags.png)
+
+## Authors
+
+To create Author, go to `Dashboard > Team`
+
+![](/assets/images/common/team.png)
+
+### Setup pages {#setup}
+
+### New Page
+
+To create new page, go to `Dashboard > Stories > New Story` Give the title for new stories and mark "Turn this post
+into a page" from the settings icon
+
+![](/assets/images/common/page.png)
+
+### Tag
+
+To create tag, go to `Dashboard > tags`
+
+![](/assets/images/common/tags.png)
+
+### Authors
+
+To create Author, go to `Dashboard > Team`
+
+![](/assets/images/common/team.png)
+
+## Setup Pages {#setup}
+
+### Post Card Color Settings
+
+#### Color setting
+
+You can easily change the color of the card. Just use the color name in your post tag, color will automatically show in
+the post card. You can use the specic color for the posts.
+
+- `purple`
+- `grape`
+- `nevy`
+- `carrot`
+- `pink`
+- `violet`
+- `blue`
+- `azure`
+- `rosepink`
+- `space`
+- `lightgray`
+
+![](/assets/images/arkai/color.png)
+
+::: tip Attention Please
+color tag will not show in the tag list and other pages. In the homepage, only primary tag will show.
+If you don't provide feature image of post, the solid gradient color will show.
+:::
+<br>
+<br>
+<br>
+
+### Search API and Activation
+
+Search will not work when you install the ghost theme. You need to add API for the search option activation. Follow the
+instraction to make the API key.
+
+1. Go to to `Settings > Integrations > Custom integrations > + Add custom integration`
+2. Enter a name of "New Custom Integration" and create
+3. Copy `Content API Key` fro API Keys
+4. Go to `Settings > Code injections > Blog Header`
+5. Add `script` like this to add api key. Don't change the variable name.
+
+```javascript
+<script>var contentApiKey = "your api key";</script>
+```
+
+Replace `your api key` with your api key that you created.
+
+API Code creation:
+![](/assets/images/arkai/integration.png)
+<br>
+API code injection:
+![](/assets/images/arkai/api-key.png)
+<br>
+Search result:
+![](/assets/images/arkai/search-result.png)
+
+### Featured Slider
+
+![](/assets/images/arkai/featured-slider.png)
+
+When you set up your post as featured, it will add automatically to featured slider. I suggest you to select such a
+post as featured post which has post `featured image`.
+
+![](/assets/images/common/make-feature-post.png)
+
+<br />
+<br />
+<br />
+<br />
+<br />
+
+### Footer Links
+
+You can change the footer links and text from the theme files.
+
+- Open the theme folders
+- Go to `partials > footer-1.hbs` and open in a code editor
+- Change the footer links from `footer-1.hbs` file. See the screenshot
+
+![](/assets/images/arkai/footer.png)
+
+<br />
+<br />
+<br />
+<br />
+<br />
+
+### Popular Post in the right sidebar
+
+To show post in the right sidebar, please use `popular` tag in the post. If you use `popular` tag, this post will show
+automatiacally.
+
+![](/assets/images/arkai/popular.png)
+
+**How the popular post will show**
+
+![](/assets/images/arkai/popular-post.png)
+<br />
+<br />
+<br />
+<br />
+
+### Portfolio Page
+
+You can add a portfolio page very easily.
+
+- Create a page and use custom template `Portfolio`
+- Use `portfolio` tag in the post and that post will show in the postfolio page automatically
+![](/assets/images/arkai/portfolio-setting.png)
+
+![](/assets/images/arkai/portfolio.png)
+
+![](/assets/images/arkai/portfolio-page.png)
+
+<br>
+<br>
+<br>
+
+### Blog page
+
+Create a page and select the custom template `Blog` from the page settings. In the blog page, all tags will show with
+posts sequentially.
+
+![](/assets/images/arkai/blog.png)
+<br>
+<br>
+<br>
+
+### Blog page with right sidebar
+
+Create a page and select the custom template `Blog` from the page settings. In the blog page, all tags will show with
+posts sequentially.
+
+![](/assets/images/arkai/blog-sidebar.png)
+<br>
+<br>
+<br>
+
+## Tag List Page
+
+![](/assets/images/arkai/tag-list.png)
+
+**Setup:**
+Create a page with any name and select `Tags` from custom template
+
+![](/assets/images/arkai/tags-slug.png)
+
+<br />
+<br />
+<br />
+<br />
+<br />
+
+### Author List
+
+![](/assets/images/arkai/author-list.png)
+
+**setup**
+Create a page with any name and select the page template `Authors` from the custom template settings.
+
+![](/assets/images/arkai/authors.png)
+
+### Contact page
+
+Create a page name contact or any name and put the html code of contact pages that I attached in the theme. Take `HTML`
+from the editor's `+` sign and paste the code.
+
+You can change easily your eamil address and contact address, map from HTML code.
+
+![](/assets/images/arkai/contact.png)
+
+### Setup posts to show per page
+
+```json
+"config": {
+"posts_per_page": 8
+}
+```
+
+Change `posts_per_page`’s value as your wish.
+After changing this you need to `restart` your ghost
+
+```bash
+ghost restart
+```

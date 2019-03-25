@@ -1,0 +1,192 @@
+---
+layout: doc-layout
+title: Shosi ghost blogging theme
+theme_name: Shosi
+---
+
+# {{page.title}} {#title}
+
+<a href="https://electronthemes.com/item/shosi-minimal-ghost-blogging-theme/">
+    <img src="/assets/images/shosi/shosi-preview.jpg" />
+</a>
+
+When you purchase our theme. You can download Theme files from Downloads page. Navigate through your purchased items.
+Click download button then you will see 2 options. Main file contain everything. Installable Ghost Theme is included
+only installable Ghost theme files. Check list of what’s included when you download the main file option.
+
+- Installable Theme File (.zip) - You can upload this file to your Ghost dashboard to install the theme.
+
+- Documentation - Contain theme documentation file.
+
+- Licensing Folder - Contain all licensing info files.
+
+<a class="btn btn-secondary" target="_blank" href="http://redirect.electronthemes.com/shosi-ghost">
+    Live Preview
+</a>
+<a class="btn btn-primary" target="_blank" href="http://redirect.electronthemes.com/shosi-buy">
+    Download
+</a>
+<br><br>
+
+
+## Free Theme Support {#free-support}
+
+<div class="tip custom-block">
+    <p class="custom-block-title">Attention Please</p>
+    <p>All of our themes come with free support and currently we handle all support questions through Our Support <a href="https://www.facebook.com/groups/electronthemes/" target="_blank">Facebook
+    Group</a> <u>[recommended for fast support]</u>.</p>
+    <hr>
+    <p>You can also mail us for support <a href="mailto:electronthemes@gmail.com​">electronthemes@gmail.com​</a></p>
+</div>
+<br>
+### Support includes
+
+- Responding to questions or problems regarding the item and its features
+- Fixing bugs and reported issues
+- Feature Request
+- Providing updates to ensure compatibility with new software versions
+### Item support does not include
+
+- Customization and installation services. ( You can ask [paid support](https://electronthemes.com/contact/) )
+- Support for third party software and plug-ins
+
+## Installation {#installation}
+
+Login to your ghost blog `https://yourdomain.com/ghost` then navigate to `Designs > Uploads` Themes.
+
+Drug your downloaded theme zip file.
+
+![](/assets/images/common/upload.png)
+
+## Active beta features
+
+Activate beta features for featured slider data, realtime search, subscriber option
+Go to:
+
+`Dashboard > Labs`
+
+![Settings General](/assets/images/common/settings-general.png)
+
+## Menu/Navigation Setup
+
+Handle theme menu items from `Settings > Design` in the navigation section
+
+![Settings Navigation](/assets/images/common/settings-design.png)
+
+## Setup blog title, header and description
+
+**Go to:**
+
+- General > Publication icon for Favicon
+- General > Publication logo for Logo
+- General > Publication cover for Cover Image
+
+General > Title & description
+
+![Settings Navigation](/assets/images/common/settings-design.png)
+
+![](/assets/images/shosi/cover.png)
+
+## New Page
+
+To create new page, go to `Dashboard > Stories > New Story` Give the title for new stories and mark "Turn this post
+into a page" from the settings icon
+
+![](/assets/images/common/page.png)
+
+## Tag
+
+To create tag, go to `Dashboard > tags`
+
+![](/assets/images/common/tags.png)
+
+## Authors
+
+To create Author, go to `Dashboard > Team`
+
+![](/assets/images/common/team.png)
+
+## Social Profile Links
+
+You can change header and footer social profile links from Ghost dashboard `General > Social Accounts` You can change
+only facebook and twitter from here.
+
+![](/assets/images/common/social.png)
+
+You can add other social profile links from the theme files. `partials > social-profiles.hbs` If you ask me to help, I
+will help you to change the social links
+
+![](/assets/images/shosi/social-profiles.png)
+
+## Setup Featured Slider
+
+When you set up your post as featured, it will add automatically to featured slider. I suggest you to select such a
+post as featured post which has post featured image.
+
+**You can follow this step:**
+
+Featured image for the post. You will see like this.
+
+![](/assets/images/shosi/featured_post.png)
+
+# Setup Pages {#setup}
+
+## Tag List Page
+
+Create a page name `Tags` or anything and select the page template `Tags` from the settings.
+
+![](/assets/images/shosi/tags.png)
+
+## Author List
+
+Create a page name `Authors` or anything and select the page template `Authors` from the settings. You will get 2
+author list page template. `Authors` and `Author Style 2`. Select one of them.
+
+![](/assets/images/shosi/authors.png)
+
+## Full Width Single Post
+
+![](/assets/images/shosi/fullwidth.png)
+
+## Real Time Search Feature
+
+Search will not work when you install the ghost theme. You need to add API for the search option activation. Follow the
+instraction to make the API key.
+
+1. Go to to `Settings > Integrations > Custom integrations > + Add custom integration`
+2. Enter a name of "New Custom Integration" and create
+3. Copy `Content API Key` fro API Keys
+4. Go to `Settings > Code injections > Blog Header`
+5. Add `script` like this to add api key. Don't change the variable name.
+
+```
+<script>
+    var contentApiKey = "your api key";
+</script>
+```
+
+Replace `your api key` with your api key that you created.
+
+API Code creation:
+![](/assets/images/shosi/api-key.png)
+<br>
+API code injection:
+![](/assets/images/shosi/integration.png)
+<br>
+Search result:
+![](/assets/images/shosi/search.png)
+
+## Setup posts to show per page
+
+```js
+"config": {
+"posts_per_page": 6
+}
+```
+
+Change `posts_per_page`’s value as your wish.
+After changing this you need to `restart` your ghost
+
+```
+ghost restart
+```
