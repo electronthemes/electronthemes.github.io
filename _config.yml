@@ -3,7 +3,7 @@ email: electronthemes@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
     Electronthemes docs provides online documentaion of all the themes of Electronthemes market. We sell responsive wordpress and ghost themes.
 baseurl: '' # the subpath of your site, e.g. /blog
-url: '' # the base hostname & protocol for your site, e.g. http://example.com
+url: 'http://docs.electronthemes.com' # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: electronthemes1
 github_username: electronthemes
 
