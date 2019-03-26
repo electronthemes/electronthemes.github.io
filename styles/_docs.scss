@@ -1,0 +1,62 @@
+/* Docs styles */
+.doc-sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    padding-top: 75px;
+    padding-left: 20px;
+    ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    .doc-nav {
+        list-style: none;
+        padding: 0;
+    }
+}
+
+.doc-content-area {
+    max-width: 740px;
+    margin: 0 auto;
+    padding: 50px 2.5rem 2rem;
+    h2,
+    h3 {
+        margin-top: 40px;
+        border-bottom: 1px solid $border;
+        padding-bottom: 3px;
+        margin-bottom: 20px;
+        &:before {
+            content: '';
+            display: block;
+            margin-top: 80px;
+            height: 80px;
+            width: 1px;
+        }
+    }
+}
+
+/* Tips */
+.custom-block.tip {
+    background-color: $gray;
+    border-color: $tip;
+    padding: 0.1rem 1.5rem;
+    border-left-width: 0.5rem;
+    border-left-style: solid;
+    margin: 1rem 0;
+    p {
+        margin-top: 16px;
+        margin-bottom: 16px;
+    }
+}
+.custom-block {
+    p {
+        &.custom-block-title {
+            font-weight: 600;
+            margin-bottom: -0.4rem;
+            padding-bottom: 0;
+        }
+    }
+}

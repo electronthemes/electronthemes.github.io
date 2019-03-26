@@ -1,0 +1,204 @@
+---
+layout: doc-layout
+title: Writter – Ghost Portfolio Theme
+theme_name: writter
+---
+
+# {{page.title}} {#title}
+
+<a href="http://redirect.electronthemes.com/writter-buy">
+    <img src="/assets/images/writter/preview.png" />
+</a>
+
+When you purchase our theme. You can download Theme files from Downloads page. Navigate through your purchased items.
+Click download button then you will see 2 options. Main file contain everything. Installable Ghost Theme is included
+only installable Ghost theme files. Check list of what’s included when you download the main file option.
+
+- Installable Theme File (.zip) - You can upload this file to your Ghost dashboard to install the theme.
+
+- Documentation - Contain theme documentation file.
+
+- Licensing Folder - Contain all licensing info files.
+
+<a class="btn btn-secondary" target="_blank" href="http://redirect.electronthemes.com/writter-ghost">
+    Live Preview
+</a>
+<a class="btn btn-primary" target="_blank" href="http://redirect.electronthemes.com/writter-buy">
+    Buy Now
+</a>
+<br><br>
+
+
+## Free Theme Support {#free-support}
+
+<div class="tip custom-block">
+    <p class="custom-block-title">Attention Please</p>
+    <p>All of our themes come with free support and currently we handle all support questions through Our Support <a href="https://www.facebook.com/groups/electronthemes/" target="_blank">Facebook
+    Group</a> <u>[recommended for fast support]</u>.</p>
+    <hr>
+    <p>You can also mail us for support <a href="mailto:electronthemes@gmail.com​">electronthemes@gmail.com​</a></p>
+</div>
+<br>
+### Support includes
+
+- Responding to questions or problems regarding the item and its features
+- Fixing bugs and reported issues
+- Feature Request
+- Providing updates to ensure compatibility with new software versions
+### Item support does not include
+
+- Customization and installation services. ( You can ask [paid support](https://electronthemes.com/contact/) )
+- Support for third party software and plug-ins
+
+### Installation {#installation}
+
+Login to your ghost blog `https://yourdomain.com/ghost` then navigate to `Designs > Uploads` Themes.
+
+Drug your downloaded theme zip file.
+
+![](/assets/images/common/upload.png)
+
+### Menu/Navigation Setup
+
+Handle theme menu items from `Settings > Design` in the navigation section
+
+![Settings Navigation](/assets/images/writter/settings.design.png)
+
+### Setup blog title, header and description
+
+**Go to:**
+
+- General > Publication icon for Favicon
+- General > Publication logo for Logo
+- General > Publication cover for Cover Image
+
+General > Title & description
+
+![Settings Navigation](/assets/images/writter/settings.general.png)
+
+### New Page
+
+To create new page, go to `Dashboard > Stories > New Story` Give the title for new stories and mark "Turn this post
+into a page" from the settings icon
+
+![](/assets/images/common/page.png)
+
+### Tag
+
+To create tag, go to `Dashboard > tags`
+
+![](/assets/images/common/tags.png)
+
+### Authors
+
+To create Author, go to `Dashboard > Team`
+
+![](/assets/images/common/team.png)
+
+### Home Page Cover
+
+![](/assets/images/writter/cover.png)
+
+**Setup**
+
+navigate to `Settings > General > Publication Cover`
+
+![](/assets/images/writter/settings.publication-cover.png)
+
+<br />
+<br />
+<br />
+<br />
+<br />
+
+### Search API and Activation
+
+Search will not work when you install the ghost theme. You need to add API for the search option activation. Follow the
+instraction to make the API key.
+
+1. Go to to `Settings > Integrations > Custom integrations > + Add custom integration`
+2. Enter a name of "New Custom Integration" and create
+3. Copy `Content API Key` fro API Keys
+4. Go to `Settings > Code injections > Blog Header`
+5. Add `script` like this to add api key. Don't change the variable name.
+
+```
+<script>
+    var contentApiKey = "your api key";
+</script>
+```
+
+Replace `your api key` with your api key that you created.
+
+API Code creation:
+![](/assets/images/writter/api-key.png)
+<br>
+API code injection:
+![](/assets/images/writter/integration.png)
+<br>
+Search result:
+![](/assets/images/writter/search-result.png)
+
+### Featured Slider
+
+![](/assets/images/writter/featured-slider.png)
+
+When you set up your post as featured, it will add automatically to featured slider. I suggest you to select such a
+post as featured post which has post `featured image`.
+
+![](/assets/images/common/make-feature-post.png)
+
+<br />
+<br />
+<br />
+<br />
+<br />
+
+### Tag List Page
+
+![](/assets/images/writter/tag-list.png)
+
+**Setup:**
+Create a page with any name and select `Tags` custom page template from page settings
+
+![](/assets/images/writter/tags-slug.png)
+
+<br />
+<br />
+<br />
+<br />
+<br />
+
+### Author List
+
+Create a page name `Authors` or anything and select the page template `Authors` from the settings.
+
+![](/assets/images/writter/authors.png)
+<br />
+<br />
+<br />
+
+### Portfolio List
+
+Create a page name `Portfolio` or anything and select the page template `Portfolio` from the settings.
+
+![](/assets/images/writter/portfolio.png)
+
+To show the post as portfolio in the portfolio page, provide `portfolio` tag in the post as primary tag
+
+![](/assets/images/writter/portfolio-tag.png)
+
+### Setup posts to show per page
+
+```js
+"config": {
+"posts_per_page": 6
+}
+```
+
+Change `posts_per_page`’s value as your wish.
+After changing this you need to `restart` your ghost
+
+```bash
+ghost restart
+```
