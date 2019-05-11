@@ -14,6 +14,21 @@ thumbnail: zenifer/preview.png
 
 ## Included Files & Sources
 
+```
+Zenifer
+│   Documentation
+│   Theme-file
+│   │   .html
+│   │   mail.php
+│   └───assets
+│       │   css
+│       │   fonts
+│       │   img
+│       │   js
+│       │   scss
+
+```
+
 ### Included Stylesheets:
 ```
 <!-- CSS Files -->
@@ -178,12 +193,78 @@ You can find it into __script.js__ file.
 
 ```
 ### Contact Form
-The Contact Form fully dynamic . You can randamly use it and enjoy. 
+The Contact Form fully dynamic . You can change your email address from the `mail.php` file.
+
+Here is the html markup:
+```
+<form action="mail.php" method="POST">
+    <input class="form-control" name="name" type="text" placeholder="Name" required>
+    <input class="form-control" name="email" type="text" placeholder="Email address" required>
+    <input class="form-control" name="subject" type="text" placeholder="Subject" required>
+    <textarea class="form-control" name="message" id="validationTextarea" name="message" cols="10" rows="4" placeholder="message" required></textarea>
+    <div class="submit-btn mt-30 text-right">
+        <button type="submit" name="submit" class="btn btn-sm rounded">Send Message</button>
+    </div>
+</form>
+```
+
+Here is the `mail.php` code. You can change you email address. Replace your mail address to this line `define( "RECIPIENT_EMAIL", "electronthemes@gmail.com" );`
+```
+<?php
+// Naming Constant
+define( "RECIPIENT_NAME", "Electron Themes" );
+define( "RECIPIENT_EMAIL", "electronthemes@gmail.com" );
+// Values
+$success = false;
+$senderName = isset( $_POST['name'] ) ? preg_replace( "/[^\.\-\' a-zA-Z0-9]/", "", $_POST['name'] ) : "";
+$senderEmail = isset( $_POST['email'] ) ? preg_replace( "/[^\.\-\_\@a-zA-Z0-9]/", "", $_POST['email'] ) : "";
+$subject = isset( $_POST['subject'] ) ? preg_replace( "/[^\.\-\' a-zA-Z0-9]/", "", $_POST['subject'] ) : "";
+$message = isset( $_POST['message'] ) ? preg_replace( "/(From:|To:|BCC:|CC:|Subject:|Content-Type:)/", "",
+$_POST['message'] ) : "";
+// Send the email
+if ( $senderName && $senderEmail && $message ) {
+  $recipient = RECIPIENT_NAME . " <" . RECIPIENT_EMAIL . ">";
+  $headers = "From: " . $senderName . " <" . $senderEmail . ">";
+  $success = mail( $recipient, $subject, $message, $headers );
+  //Set Location
+  header('Location: homepage.html');
+}
+?>
+```
+
 ### Instagram Feed
 To change your instagram API code . Please read this blog post [How to Generate Instagram Access Token to Show Feed](https://electronthemes.com/blog/how-to-generate-instagram-access-token-to-show-feed/). Please replace the red mark instagram API token code to your own generated instagram API token .
 <br><br>
 ![Instagram token generate instraction image](/assets/images/zenifer/instagram-token.png "Instagram token generate instraction")
 ### Newsletter
+For newsletter we have used mailchimp. Just create a form from your mailchimp account and just replace the action code with newly created form's action code.
+Here is the form code: 
+```
+<div id="mc_embed_signup" class="subscribe-form">
+    <form action="https://facebook.us16.list-manage.com/subscribe/post?u=68ee4c3633ca11143594f679b&amp;id=602d19eb3a" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+        <div id="mc_embed_signup_scroll">
+            <div class="mc-field-group">
+                <input type="email" value="" placeholder="your email address" name="EMAIL" class="required email form-control" id="mce-EMAIL">
+                <button type="submit" name="subscribe" id="mc-embedded-subscribe" class="button"><i class="fa fa-paper-plane-o"></i></button>
+            </div>
+            <div id="mce-responses" class="clear">
+                <div class="response" id="mce-error-response" style="display:none"></div>
+                <div class="response" id="mce-success-response" style="display:none"></div>
+            </div>
+            <div style="position: absolute; left: -5000px;" aria-hidden="true">
+                <input type="text" name="b_68ee4c3633ca11143594f679b_602d19eb3a" tabindex="-1" value="">
+            </div>
+        </div>
+    </form>
+</div>
+<!--End mc_embed_signup-->
+```
+Here is the screenshot that part you need to change.
+<br><br>
+![image](/assets/images/zenifer/mailchimp.png)
+<br><br>
+Here is the tutorial how to create form: [subscribe form](https://mailchimp.com/help/add-a-signup-form-to-your-website/)
+
 ### Icons
 Icons are taken from [flaticon.com](https://www.flaticon.com). All icons are SVG file. You can get this icons follow below instraction :
 <br><br>
