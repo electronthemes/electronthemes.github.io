@@ -6,6 +6,7 @@
     height: 100vh;
     padding-top: 100px;
     padding-left: 20px;
+
     ul {
         list-style: none;
         padding: 0;
@@ -19,15 +20,16 @@
 }
 
 .doc-content-area {
-    max-width: 740px;
     margin: 0 auto;
-    padding: 50px 2.5rem 2rem;
+    padding: 60px 100px 2rem;
+
     h2,
     h3 {
         margin-top: 40px;
         border-bottom: 1px solid $border;
         padding-bottom: 3px;
         margin-bottom: 20px;
+
         &:before {
             content: '';
             display: block;
@@ -46,11 +48,13 @@
     border-left-width: 0.5rem;
     border-left-style: solid;
     margin: 1rem 0;
+
     p {
         margin-top: 16px;
         margin-bottom: 16px;
     }
 }
+
 .custom-block {
     p {
         &.custom-block-title {
@@ -61,10 +65,31 @@
     }
 }
 
+.hljs{
+    margin: 0 0 30px;
+}
 
-@media screen and (max-width: 767px){
-    .doc-sidebar{
+@media screen and (max-width: 1199px) {
+    .doc-content-area {
+        margin-left: 50px;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .doc-sidebar {
         position: relative;
         height: auto;
     }
+    .doc-content-area {
+        padding: 40px 15px;
+        margin-left: 0px;
+    }
+}
+@media screen and (max-width: 575px) {
+    .doc-sidebar {
+        position: relative;
+        height: auto;
+    }
+   
+    
 }
