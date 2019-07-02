@@ -1,0 +1,297 @@
+---
+layout: doc-layout
+title: Newsportal  HTML Template
+theme_name:  Newsportal
+keywords: HTML5 template, responsive and Creative HTML5 Template , clean and minimal, newsportal, news, post, 
+buy: http://redirect.electronthemes.com/newsportal-buy
+demo: http://redirect.electronthemes.com/newsportal-html
+thumbnail: newsportal/newsportal-1.jpg
+---
+
+# {{page.title}}
+{% include support.html %}
+
+## Included Files & Sources
+```
+Zenifer
+│ Documentation
+│ Theme-file
+│ │ .html
+│ │ mail.php
+│ └───assets
+│ │ css
+│ │ fonts
+│ │ img
+│ │ js
+│ │ scss
+```
+
+## Run SASS and Gulp
+We developed this theme using scss and gulp. We have included SCSS and gulp file in the theme file. To work with this file, you have to ensure your computer has already installed `nodeJS` and `gulp` globally.
+1. Download NodeJS from <a href="https://nodejs.org/en/download/" target="_blank">here</a> and install
+2. Install gulp globally `npm install gulp-cli -g`
+3. Download sass from here [SASS](https://sass-lang.com/) and install
+
+Now check the version of Node, Gulp, sass.
+*Node: `node -v`
+*Gulp: `gulp -v`
+*SASS: `sass --version`
+
+Now to run the theme file, install Node packages. run 
+1. `npm install` 
+2. `npm run build` 
+3. `npm run start`
+
+
+## CSS & Scripts
+You will get all css and scripts in the assets folder. CSS files in `css` folder and JS scripts in `js` folder
+
+ALL CSS files:
+```
+<link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css" />
+<link rel="stylesheet" type="text/css" href="assets/css/components/component.css" media="all" />
+<link rel="stylesheet" type="text/css" href="assets/css/style.css" media="all">
+```
+
+Script files:
+```
+<!-- Jquery -->
+<script src="assets/js/jquery-3.3.1.min.js"></script>
+<!-- Jquery migrate js -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-migrate/3.0.1/jquery-migrate.min.js"></script>
+<!-- Jquery popper js -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<!-- Bootstrap Min js -->
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+<!-- Jquery select js -->
+<script src="assets/js/bootstrap-select.min.js"></script>
+<!-- Jquery carousel js -->
+<script src="assets/js/owl.carousel.min.js"></script>
+<!-- Jquery Slicknav js -->
+<script src="assets/js/jquery.slicknav.min.js"></script>
+<!-- Jquery image loaded js -->
+<script src="assets/js/imageloaded.min.js"></script>
+<!-- Jquery magnific popup js -->
+<script src="assets/js/jquery.magnific-popup.min.js"></script>
+<!-- Jquery typer js -->
+<script src="assets/js/typer.js"></script>
+<!-- Jquery typer js -->
+<script src="assets/js/particles.min.js"></script>
+<!-- Jquery main scripts js -->
+<script src="assets/js/scripts.js"></script>
+```
+
+## Helper classes:
+You will get all helper tools here. We have used bootstrap color, backgraound, spacing classes. We made some extra
+helper classes for best uses.
+
+#### Color classes:
+
+**uses:**
+```
+<div class="text-primary"></div>
+<div class="text-secondary"></div>
+<div class="text-white"></div>
+<div class="text-heading"></div>
+<div class="text-paragraph"></div>
+<div class="text-gray"></div>
+```
+Reference: `text-[value]`
+<br>
+value: `primary|secondary|white|heading|paragraph|light-gray|gray|light-pink|pink|blue|dimond-blue|red||`
+
+#### Backgraound classes:
+
+**uses:**
+```
+<div class="bg-primary"></div>
+<div class="bg-dark-primary"></div>
+<div class="bg-secondary"></div>
+<div class="bg-white"></div>
+<div class="bg-heading"></div>
+```
+Reference: `bg-[value]`
+<br>
+value: `primary|secondary|light-black|white|heading|gray|dimond-blue|smoke|deep-purple|purple|light-purple|`
+
+#### Font weight classes:
+
+**uses:**
+```
+<div class="fw-700"></div>
+<div class="fw-600"></div>
+<div class="fw-500"></div>
+```
+Reference: `fw-[value]`
+<br>
+value: `700|600|500|400|300|`
+
+### Spacing classes:
+
+#### Padding classes:
+**uses:**
+```
+<div class="pt-10">padding top</div>
+<div class="pb-15">padding bottom</div>
+<div class="pl-10">padding left</div>
+<div class="pr-10">padding right</div>
+<div class="px-10">padding left right</div>
+<div class="py-10">padding top bottom</div>
+```
+Reference: `p-[value]`
+<br>
+<br> t for `top`,
+<br> b for `bottom`,
+<br> l for `left`,
+<br> r for `right`,
+<br> x for `left-right`,
+<br> y for `top-bottom`,
+<br>
+<br>
+value: `10|15|20|25|...|195|200`
+
+#### Margin classes:
+**uses:**
+```
+<div class="mt-10">margin top</div>
+<div class="mb-15">margin bottom</div>
+<div class="ml-10">margin left</div>
+<div class="mr-10">margin right</div>
+<div class="mx-10">margin left right</div>
+<div class="my-10">margin top bottom</div>
+```
+Reference: `m-[value]`
+<br>
+<br> t for `top`,
+<br> b for `bottom`,
+<br> l for `left`,
+<br> r for `right`,
+<br> x for `left-right`,
+<br> y for `top-bottom`,
+<br>
+<br>
+value: `10|15|20|25|...|195|200`
+
+#### Media query padding classes
+**uses:**
+```
+<div class="pt-xs-10">Extra small devices (portrait phones, less than 576px)</div>
+<div class="pb-sm-10">Small devices (landscape phones, 576px and up)</div>
+<div class="pl-md-10"> Medium devices (tablets, 768px and up)</div>
+<div class="pr-lg-10">Large devices (desktops, 992px and up)</div>
+<div class="px-xl-10">Extra large devices (large desktops, 1200px and up)</div>
+
+```
+Reference: `p-[size]-[value]`
+<br>
+size: `xs|sm|md|lg|xl|`
+<br>
+value: `10|15|20|25|...|195|200`
+
+#### Media query margin classes
+
+**uses:**
+```
+<div class="mt-xs-10">Extra small devices (portrait phones, less than 576px)</div>
+<div class="mb-sm-10">Small devices (landscape phones, 576px and up)</div>
+<div class="ml-md-10"> Medium devices (tablets, 768px and up)</div>
+<div class="mr-lg-10">Large devices (desktops, 992px and up)</div>
+<div class="mx-xl-10">Extra large devices (large desktops, 1200px and up)</div>
+
+```
+Reference: `m-[size]-[value]`
+<br>
+size: `xs|sm|md|lg|xl|`
+<br>
+value: `10|15|20|25|...|195|200`
+
+#### Width classes
+**uses:**
+```
+<div class="width-10"></div>
+<div class="width-20"></div>
+<div class="width-30"></div>
+```
+Reference: `width-[value]`
+<br>
+value: `10|20|30|40|...|190|200`
+
+#### Max-width classes
+**uses:**
+```
+<div class="maxw-50"></div>
+<div class="maxw-100"></div>
+<div class="maxw-150"></div>
+```
+Reference: `maxw-[value]`
+<br>
+value: `50|100|150|...|1050|1100`
+
+#### Height classes
+**uses:**
+```
+<div class="height-10"></div>
+<div class="height-20"></div>
+<div class="height-30"></div>
+```
+Reference: `height-[value]`
+<br>
+value: `10|20|30|40|...|190|200`
+
+#### Max-height classes
+**uses:**
+```
+<div class="maxh-10"></div>
+<div class="maxh-20"></div>
+<div class="maxh-30"></div>
+```
+Reference: `maxh-[value]`
+<br>
+value: `10|20|30|40|...|390|400`
+
+<br>
+
+### Source & Credits
+
+#### Images
+All images are only for demonstration purpose, however you can re-download them in sites below. Almost all (not including overclothing.com, Daniel Zenda, Freepik etc...) images are released free of copyrights under Creative Commons CC0. 
+
+* [Pexels](https://www.pexels.com/)
+* [Unsplash](https://unsplash.co)
+
+
+#### CSS & Fonts
+
+Use this  `CSS` & `fonts` reference you can update `css` & `fonts` to customize your design.
+
+* [Bootstrap Framework](http://getbootstrap.com/)
+* [Bootstrap-select](https://developer.snapappointments.com/bootstrap-select)
+* [Font Awesome](http://fortawesome.github.io/Font-Awesome/)
+* [Google Fonts](https://www.google.com/fonts)
+* [ElegantIcons](https://github.com/heimrichhannot/elegant-icons)
+* [Flipclock](http://flipclockjs.com/)
+* [Owl Carousel v2.3.4](https://owlcarousel2.github.io/OwlCarousel2/)
+* [Slicknav](https://slicknav.io/)
+* [Aos Animation](https://michalsnik.github.io/aos/)
+* [Animation](http://daneden.github.io/animate.css/)
+
+
+#### Scripts
+
+Use this  `jquery` scripts  reference  you can update `jquery` to modify your design.
+
+* [jQuery](http://www.jquery.com/)
+* [jquery-migrate](https://cdnjs.cloudflare.com/ajax/libs/jquery-migrate/3.0.1/jquery-migrate.min.js)
+* [Bootstrap](https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js)
+* [Popper](https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js)
+* [Bootstrap-select](https://developer.snapappointments.com/bootstrap-select)
+* [Owl Carousel v2.3.4](http://www.owlcarousel.owlgraphic.com/)
+* [Magnific Popup](http://dimsemenov.com/plugins/magnific-popup/)
+* [Flipclock](http://flipclockjs.com/)
+* [Slicknav](https://slicknav.io/)
+
+<br>
+<br>
+
+# Don't forget to add 5 star rates on our product
+⭐⭐⭐⭐⭐
