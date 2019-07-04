@@ -17,13 +17,12 @@ Zenifer
 │ Documentation
 │ Theme-file
 │ │ .html
-│ │ mail.php
 │ └───assets
-│ │ css
-│ │ fonts
-│ │ img
-│ │ js
-│ │ scss
+    │ │ css
+    │ │ fonts
+    │ │ img
+    │ │ js
+    │ │ scss
 ```
 
 ## Run SASS and Gulp
@@ -43,59 +42,27 @@ Now to run the theme file, install Node packages. run
 3. `npm run start`
 
 
+###### Adding new plugins using gulp 
+You can add new js plugin's js and css using gulp file. All external css and js files are called in `gulpfile.js`. You can add new files and run `npm run build && npm run start`
+
+
+
+
 ## CSS & Scripts
-You will get all css and scripts in the assets folder. CSS files in `css` folder and JS scripts in `js` folder
+You will get all css and scripts in the assets folder. CSS files in `css` folder and JS scripts in `js` folder. All css and JS plugins file are compressed. I have compressed that for loading fast. **If you need uncompressed file, please send us message or mail us. We will send the uncompressed files.**
 
 ALL CSS files:
 ```
 <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css" />
-<link rel="stylesheet" type="text/css" href="assets/css/components/component.css" media="all" />
-<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="assets/css/components.css" media="all" />
 <link rel="stylesheet" type="text/css" href="assets/css/style.css" media="all">
 ```
 
 Script files:
 ```
-<!-- Jquery -->
-<script src="assets/js/jquery-3.3.1.min.js"></script>
-<!-- Jquery migrate js -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-migrate/3.0.1/jquery-migrate.min.js"></script>
-<!-- Jquery popper js -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
-<!-- Bootstrap Min js -->
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-<!-- Jquery select js -->
-<script src="assets/js/bootstrap-select.min.js"></script>
-<!-- AOS  js -->
-<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-<!-- Jquery carousel js -->
-<script src="assets/js/owl.carousel.min.js"></script>
-<!-- Jquery Slicknav js -->
-<script src="assets/js/jquery.slicknav.min.js"></script>
-<!-- Jquery image loaded js -->
-<script src="assets/js/imageloaded.min.js"></script>
-<!-- Jquery waypoint js -->
-<script src="assets/js/jquery.waypoints.js"></script>
-<!-- Jquery line progressbar js -->
-<script src="assets/js/jquery.lineProgressbar.js"></script>
-<!-- Jquery magnific popup js -->
-<script src="assets/js/jquery.magnific-popup.min.js"></script>
-<!--Google Map API-->
+<!-- Jquery scripts -->
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCn4uayw359fjMh4P9i2rKKZYHzXaqTRNs"></script>
-<!-- Jquery Vector map js -->
-<script src="assets/js/jvectormap.min.js"></script>
-<!-- Jquery Vector World map js -->
-<script src="assets/js/world-mill.js"></script>
-<!-- Jquery flipclock -->
-<script src="assets/js/flipclock.min.js"></script>
-<!-- Jquery nice scroll js -->
-<script src="assets/js/mCustomScrollbar.min.js"></script>
-<!-- Jquery typer js -->
-<script src="assets/js/typer.js"></script>
-<!-- Jquery typer js -->
-<script src="assets/js/particles.min.js"></script>
-<!-- Jquery main scripts js -->
-<script src="assets/js/scripts.js"></script>
+<script src="assets/js/plugins-min.js"></script>    
 ```
 
 ## Helper classes:
