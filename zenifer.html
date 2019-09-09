@@ -14,6 +14,8 @@ thumbnail: zenifer/zenifer.jpg
 
 ## Included Files & Sources
 
+You will get 5 unique homepage, 45+ pages and a lot of components for uses.
+
 ```
 Zenifer
 │   Documentation
@@ -29,48 +31,78 @@ Zenifer
 
 ```
 
+### How to run the file?
+You will get the `theme-file.zip` in the downloadable files. Open it on the localserver like `localhost` or `127.0.0.1:8080`. To run I use **live-server** node package. Install from here: [Live Server](https://www.npmjs.com/package/live-server). **You must have node installed in your computer**
+If you don't use localserver, some images may be broken or too big
+
+### How to run development-file?
+We made this HTML using **gulp** and **SCSS**. You must have installed Node and some node package globally like `gulp` and `sass`
+- To install node, download package from here: https://nodejs.org/en/download/
+- Install gulp globally: `npm install gulp-cli -g` and then check `gulp -v`
+- Install sass globally: `npm install sass -g` and then check `sass --version`
+- Install live-server globally: `npm install live-server -g` and then check `live-server -v`
+
 ### Included Stylesheets:
 ```
-<!-- CSS Files -->
+<!-- CSS FILES -->
 <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css" />
 <link rel="stylesheet" type="text/css" href="assets/css/components/component.css" media="all" />
+<link href="https://cdn-images.mailchimp.com/embedcode/classic-10_7.css" rel="stylesheet" type="text/css">
 <link rel="stylesheet" type="text/css" href="assets/css/style.css" media="all">
 ```
 ### Included JavaScript:
 ```
-<!-- jquery JS -->
+<!-- JQUERY JS -->
 <script src="assets/js/jquery-3.3.1.min.js"></script>
-<!-- jquery-migrate.min JS -->
+<!-- JQUERY-MIGRATE.MIN JS -->
 <script src="assets/js/jquery-migrate.min.js"></script>
-<!-- popper.js JS -->
+<!-- POPPER.JS JS -->
 <script src="assets/js/popper.min.js"></script>
-<!-- bootstrap.min JS -->
+<!-- BOOTSTRAP.MIN JS -->
 <script src="assets/js/bootstrap.min.js"></script>
-<!-- carousel JS -->
+<!-- CAROUSEL JS -->
 <script src="assets/js/owl.carousel.min.js"></script>
-<!-- isotope JS -->
+<!-- ISOTOPE JS -->
 <script src="assets/js/isotope.pkgd.js"></script>
-<!-- imagesloaded JS -->
+<!-- IMAGESLOADED JS -->
 <script src="assets/js/imagesloaded.pkgd.js"></script>
-<!-- magnific-popup JS -->
+<!-- MAGNIFIC-POPUP JS -->
 <script src="assets/js/jquery.magnific-popup.min.js"></script>
-<!-- waypoints.js JS -->
+<!-- WAYPOINTS.JS  -->
 <script src="assets/js/jquery.waypoints.js"></script>
-<!-- counterup JS -->
+<!-- COUNTERUP JS -->
 <script src="assets/js/jquery.counterup.min.js"></script>
-<!--Google Map API-->
+<!--GOOGLE MAP API-->
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCn4uayw359fjMh4P9i2rKKZYHzXaqTRNs"></script>
-<!-- fitvids JS -->
+<!-- FITVIDS JS -->
 <script src="assets/js/jquery.fitvids.js"></script>
-<!-- jquery-jvectormap JS -->
+<!-- JQUERY-JVECTORMAP JS -->
 <script src="assets/js/jquery-jvectormap.min.js"></script>
-<!-- jvectormap-world-mill.js JS -->
+<!-- JVECTORMAP-WORLD-MILL.JS -->
 <script src="assets/js/jquery-jvectormap-world-mill.js"></script>
-<!-- progresscircle JS -->
+<!-- PROGRESSCIRCLE JS -->
 <script src="assets/js/progresscircle.js"></script>
-<!-- paroller JS -->
+<!-- PAROLLER JS -->
 <script src="assets/js/jquery.paroller.min.js"></script>
-<!-- Custom Script JS -->
+<!-- WOW JS -->
+<script src="assets/js/wow.min.js"></script>
+<!-- slicknav JS -->
+<script src="assets/js/jquery.slicknav.min.js"></script>
+<!-- TILT JS -->
+<script src="assets/js/tilt.jquery.min.js"></script>
+<!-- Countdown JS -->
+<script src="assets/js/jquery.countdown.min.js"></script>
+<!-- vegas JS -->
+<script src="assets/js/vegas.min.js"></script>
+<!-- kinetic JS -->
+<script src="assets/js/kinetic.js"></script>
+<!-- final JS -->
+<script src="assets/js/jquery.final-countdown.min.js"></script>
+<!-- SELECT2 JS -->
+<script src="assets/js/select2.min.js"></script>
+<!-- Instagram js -->
+<script src="assets/js/jquery.instagramFeed.min.js"></script>
+<!-- CUSTOM SCRIPT JS -->
 <script src="assets/js/scripts.js"></script>
 
 ```
@@ -235,9 +267,17 @@ if ( $senderName && $senderEmail && $message ) {
 ```
 
 ### Instagram Feed
-To change your instagram API code . Please read this blog post [How to Generate Instagram Access Token to Show Feed](https://electronthemes.com/blog/how-to-generate-instagram-access-token-to-show-feed/). Please replace the red mark instagram API token code to your own generated instagram API token .
-<br><br>
-![Instagram token generate instraction image](/assets/images/zenifer/instagram-token.png "Instagram token generate instraction")
+To show your instagram feed, just use **username** of your instagram account. You will get this code in the `scripts.js` file.
+
+```
+$.instagramFeed({
+    'username': 'electronthemes',
+    'container': "#instafeed",
+    'items': 6,
+    'display_gallery': true,
+    'styling': true
+});
+```
 ### Newsletter
 For newsletter we have used mailchimp. Just create a form from your mailchimp account and just replace the action code with newly created form's action code.
 Here is the form code: 
@@ -269,10 +309,7 @@ Here is the screenshot that part you need to change.
 <br><br>
 Here is the tutorial how to create form: [subscribe form](https://mailchimp.com/help/add-a-signup-form-to-your-website/)
 
-### Icons
-Icons are taken from [flaticon.com](https://www.flaticon.com). All icons are SVG file. You can get this icons follow below instraction :
-<br><br>
-![SVG icon download instraction image](/assets/images/zenifer/svg-icon.png "SVG icon download instraction")
+
 ### Navbar
 - __Fixed Navbar__ -
 If you want to Fixed your navbar please use '**fixed-nav**' class . Follow the below image instraction : <br><br>

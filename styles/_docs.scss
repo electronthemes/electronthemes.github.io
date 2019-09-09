@@ -29,14 +29,6 @@
         border-bottom: 1px solid $border;
         padding-bottom: 3px;
         margin-bottom: 20px;
-
-        &:before {
-            content: '';
-            display: block;
-            margin-top: 80px;
-            height: 80px;
-            width: 1px;
-        }
     }
 }
 
