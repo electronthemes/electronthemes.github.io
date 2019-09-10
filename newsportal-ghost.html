@@ -1,0 +1,169 @@
+---
+layout: doc-layout
+title: Newsportal – Creative Ghost News & Blogging Theme
+theme_name: Newsportal
+keywords:
+buy: http://redirect.electronthemes.com/delas-buy
+demo: http://redirect.electronthemes.com/delas-ghost
+thumbnail: newsportal-ghost/newsportal-home.jpg
+---
+
+# {{page.title}} {#title}
+
+{% include ghost-support.html %}
+
+
+### Installation {#installation}
+
+Login to your ghost blog `https://yourdomain.com/ghost` then navigate to `Designs > Uploads` Themes.
+
+Drug your downloaded theme zip file.
+
+![](/assets/images/common/upload.png)
+
+### Menu/Navigation Setup
+
+Handle theme menu items from `Settings > Design` in the navigation section
+
+![Settings Navigation](/assets/images/delas/navigation.png)
+
+### Setup blog General Information
+
+**Go to:**
+
+- General > Title and Description
+- General > Publication icon for Favicon
+- General > Publication logo for Logo
+- General > Publication cover for Cover Image
+
+General > Title & description
+
+![Settings Navigation](/assets/images/delas/general.png)
+
+## Setup pages {#setup}
+
+### New Page
+
+To create new page, go to `Dashboard > pages > New page` Give the title for new page
+
+![](/assets/images/common/page.png)
+
+### Tag
+
+To create tag, go to `Dashboard > Tags`
+
+![](/assets/images/common/tags.png)
+
+### Authors
+
+To create Author, go to `Dashboard > Staff`
+
+![](/assets/images/common/team.png)
+
+<br />
+
+### Search API and Activation
+
+Search will not work when you install the ghost theme. You need to add API for the search option activation. Follow the
+instraction to make the API key.
+
+1. Go to to `Settings > Integrations > Custom integrations > + Add custom integration`
+2. Enter a name of "New Custom Integration" and create
+3. Copy `Content API Key` fro API Keys
+4. Go to `Settings > Code injections > Blog Header`
+5. Add `script` like this to add api key. Don't change the variable name.
+
+```
+<script>
+    var contentApiKey = "your api key";
+</script>
+```
+
+Replace `your api key` with your api key that you created.
+
+API Code creation:
+![](/assets/images/common/integration.png)
+<br>
+API code injection:
+![](/assets/images/common/api-key.png)
+<br>
+Search result:
+
+![](/assets/images/newsportal-ghost/newsportal-search.png)
+
+### Featured Post
+
+![](/assets/images/newsportal-ghost/newsportal-featured.png)
+
+
+To make the post as featured, go to the posts and make the post as featued. When you set up your post as featured, it will add automatically to featured slider. I suggest you to select such a post as featured post which has post `featured image`.
+
+![](/assets/images/common/make-feature-post.png)
+
+<br />
+<br />
+## Setup custom url with Header & Footer
+You can set custom page url on your header & footer like `Authors`, `Tags`, `Blog`, `Contact`, `Forums` 
+
+### Custom Header url
+
+just eidite your location url in `header.hbs`follow the below instructions
+
+![](/assets/images/newsportal-ghost/newsportal-header-link.png)
+
+<br />
+<br />
+
+### Custom Footer url
+
+just eidite your location url in `footer.hbs` follow the below instructions
+
+![](/assets/images/newsportal-ghost/newsportal-footer-link.png)
+
+<br />
+<br />
+
+## Setup custom pages with templates
+You can set custom page using page template like `tag list`, `author lists`, `portfolio`
+
+### Tag List Page
+Create a page with any name and select `Tags` custom page template from page settings
+![](/assets/images/newsportal-ghost/newsportal-taglist.png)
+
+<br />
+<br />
+
+### Author List
+
+Create a page name `Authors` or anything and select the page template `Authors` from the settings.
+
+![](/assets/images/common/author-list.png)
+<br />
+<br />
+<br />
+
+### Contact
+
+Create a page name `Contact` or anything and select the page template `Portfolio` from the settings.
+
+![](/assets/images/newsportal-ghost/newsportal-template.png)
+
+### Popular news Section 
+To add posts on popular news section, add `popular` tag on the post. The post will come automatically in the popular news section.
+
+![](/assets/images/common/popular.png)
+
+### Setup posts to show per page
+
+```js
+"config": {
+"posts_per_page": 7
+}
+```
+
+Change `posts_per_page`’s value as your wish on `package.json` file in the theme file.
+After changing this you need to `restart` your ghost
+
+```bash
+ghost restart
+```
