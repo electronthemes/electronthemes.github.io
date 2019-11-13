@@ -21,6 +21,8 @@ if (window.attachEvent) {
     }
 }
 
+
+
 /**
  * AnchorJs
  */
@@ -40,3 +42,19 @@ anchors.add(selector)
  */
 const images = [...document.querySelectorAll('.doc-content-area img')]
 mediumZoom(images)
+
+
+$(document).ready(function(){
+    $('.doc-nav a, .anchorjs-link').click(function() {
+        if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
+          var target = $(this.hash);
+          target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+          if (target.length) {
+            $('html,body').animate({
+              scrollTop: target.offset().top - 90
+            }, 1000); // The number here represents the speed of the scroll in milliseconds
+            return false;
+          }
+        }
+      });
+})

@@ -18,10 +18,14 @@
         padding: 0;
     }
 }
+.medium-zoom-overlay{
+    z-index: 9999;
+}
 
 .doc-content-area {
     margin: 0 auto;
-    padding: 60px 100px 2rem;
+    padding: 60px 50px 2rem;
+    max-width: 800px;
 
     h2,
     h3 {
