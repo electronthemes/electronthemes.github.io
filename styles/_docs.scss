@@ -1,4 +1,11 @@
 /* Docs styles */
+code {
+    font-size: 87.5%;
+    background-color: #e83e8c;
+    word-break: break-word;
+    padding: 5px;
+    color: #fff;
+}
 .doc-sidebar {
     position: fixed;
     top: 0;
@@ -33,6 +40,12 @@
         border-bottom: 1px solid $border;
         padding-bottom: 3px;
         margin-bottom: 20px;
+    }
+    h2{
+        font-size: 1.6rem;
+    }
+    h3{
+        font-size: 1.3rem;
     }
 }
 
