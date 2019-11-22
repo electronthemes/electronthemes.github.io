@@ -1,7 +1,7 @@
 ---
 layout: doc-layout
 title: Writter – Ghost Portfolio Theme
-theme_name: writter
+theme_name: writter - v3.0.1
 buy: http://redirect.electronthemes.com/writter-buy
 demo: http://redirect.electronthemes.com/writter-ghost
 thumbnail: writter/preview.png
@@ -113,6 +113,43 @@ post as featured post which has post `featured image`.
 <br />
 <br />
 <br />
+## Routes
+Upload `routes.yaml` to get the routes for membership. It is very important. Without it, membership page will now work. `routes.yaml` is included with the theme file.
+
+![](/assets/images/writter/routes.png)
+
+## Subscriptions and Memberships
+In ghost version 3.x, new features has been released. It is an awesome feature. Subscriber can read paid post like medium after their paid subscription. Delas theme are providing subscription feature.
+### Enable membership
+To enablabe membership, go to `Labs > Members (Beta)`.
+- Add Stripe API Key ()
+- Add Stripe Secret key
+- Add subscription pricing for Monthly and Yearly
+
+![](/assets/images/writter/membership.png)
+
+### Sign in
+Signin page where your user can signin who has aleady account (Free or paid account). When your memmber provide email address they will get a sign in link to his email and using that he/she can login to the site.
+You can visit here to see the signin page: [Signin](http://writter.electronthemes-ghost.com/signin/)
+* To edit signin page, go to `signin.hbs` in the theme file
+
+### Signup
+Signup page where use can sugnup for the subscriptions (Free or Paid). To edit signup page, go to `signup.hbs`
+
+### Subscription
+Ghost v3 has new feature that is paid subscription. We have added this feature. You can edit **subscription/membership** prcing table. Go to `subscribe.hbs` and you will get 3 pricing tables.
+* First pricing table is for Free
+* Second is for **Monthly**
+* Third is for **Yearly**
+
+![](/assets/images/writter/pricing.png)
+
+After Paid up for the subscribtion, you will get the `account` page like this:
+
+![](/assets/images/writter/paid.png)
+
+### Custom images
+To edit custom images of [Signup](http://writter.electronthemes-ghost.com/signup/) and [Signin](http://writter.electronthemes-ghost.com/signin/) page, go to `custom-images.hbs` in the **partials** folder
 
 ## Custom Page list
 
